@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Basic SEO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Belajar Coding">
+    <meta name="description" content="Belajar coding dari dasar hingga mahir dengan materi HTML, CSS, JavaScript, PHP, dan teknologi web modern. Cocok untuk pemula yang ingin memulai perjalanan menjadi programmer profesional.">
+    <meta name="keywords" content="belajar coding, belajar programming, kursus coding, belajar HTML, belajar CSS, belajar JavaScript, belajar PHP, tutorial coding, programmer pemula">
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.example.com/belajar-coding">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://www.example.com/favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:title" content="Belajar Coding dari Dasar hingga Mahir">
+    <meta property="og:description" content="Platform belajar coding dengan materi lengkap, terstruktur, dan mudah dipahami untuk pemula hingga tingkat lanjutan.">
+    <meta property="og:url" content="https://www.example.com/belajar-coding">
+    <meta property="og:site_name" content="Belajar Coding">
+    <meta property="og:image" content="https://www.example.com/images/og-belajar-coding.jpg">
+    <meta property="og:image:alt" content="Belajar Coding dari Dasar hingga Mahir">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Belajar Coding dari Dasar hingga Mahir">
+    <meta name="twitter:description" content="Pelajari coding secara bertahap mulai dari HTML, CSS, JavaScript hingga teknologi web modern.">
+    <meta name="twitter:image" content="https://www.example.com/images/og-belajar-coding.jpg">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <title>Belajar Coding dari Dasar hingga Mahir | Panduan Programming Lengkap</title>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Belajar Coding",
+        "url": "https://www.example.com/",
+        "description": "Platform belajar coding dan programming untuk pemula hingga tingkat lanjutan.",
+        "inLanguage": "id-ID"
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #22d3ee;
+            --dark: #0f172a;
+            --dark-2: #1e293b;
+            --text: #334155;
+            --muted: #64748b;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --radius: 18px;
+            --shadow: 0 20px 50px rgba(15, 23, 42, .08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: rgba(255,255,255,.92);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(226,232,240,.8);
+        }
+
+        .navbar {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #475569;
+            transition: .3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+
+        .nav-button {
+            padding: 11px 18px;
+            color: white !important;
+            background: var(--primary);
+            border-radius: 10px;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 110px 0 120px;
+            background:
+                radial-gradient(circle at 85% 20%, rgba(99,102,241,.22), transparent 30%),
+                radial-gradient(circle at 10% 80%, rgba(34,211,238,.14), transparent 28%),
+                var(--dark);
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 780px;
+        }
+
+        .badge {
+            display: inline-flex;
+            padding: 8px 14px;
+            border: 1px solid rgba(255,255,255,.15);
+            background: rgba(255,255,255,.07);
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 70px);
+            line-height: 1.08;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 span {
+            color: var(--secondary);
+        }
+
+        .hero p {
+            max-width: 680px;
+            color: #cbd5e1;
+            font-size: 18px;
+            margin-bottom: 34px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 22px;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,.2);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,.08);
+        }
+
+        /* =========================
+           GENERAL SECTION
+        ========================== */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-header {
+            max-width: 720px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .section-header .label {
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-header h2 {
+            color: var(--dark);
+            font-size: clamp(30px, 4vw, 44px);
+            line-height: 1.2;
+            margin: 10px 0 16px;
+        }
+
+        .section-header p {
+            color: var(--muted);
+        }
+
+        /* =========================
+           FEATURES
+        ========================== */
+
+        .features {
+            background: var(--light);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eef2ff;
+            border-radius: 14px;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: var(--dark);
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* =========================
+           ROADMAP
+        ========================== */
+
+        .roadmap {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .roadmap-item {
+            padding: 26px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: white;
+        }
+
+        .number {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--dark);
+            color: white;
+            border-radius: 50%;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .roadmap-item h3 {
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .roadmap-item p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* =========================
+           COURSE
+        ========================== */
+
+        .courses {
+            background: var(--light);
+        }
+
+        .course-card {
+            display: flex;
+            flex-direction: column;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .course-top {
+            padding: 28px;
+            background: var(--dark);
+            color: white;
+        }
+
+        .course-top h3 {
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .course-top p {
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        .course-body {
+            padding: 26px;
+        }
+
+        .course-body ul {
+            list-style: none;
+        }
+
+        .course-body li {
+            padding: 8px 0;
+            color: #475569;
+            font-size: 14px;
+        }
+
+        .course-body li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: 800;
+            margin-right: 10px;
+        }
+
+        /* =========================
+           ARTICLE
+        ========================== */
+
+        .article {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .article h2 {
+            font-size: 32px;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .article h3 {
+            color: var(--dark);
+            margin: 28px 0 10px;
+        }
+
+        .article p {
+            margin-bottom: 18px;
+            color: var(--muted);
+        }
+
+        .code-box {
+            background: #020617;
+            color: #e2e8f0;
+            padding: 22px;
+            border-radius: 14px;
+            overflow-x: auto;
+            margin: 24px 0;
+            font-family: Consolas, monospace;
+            font-size: 14px;
+        }
+
+        /* =========================
+           FAQ
+        ========================== */
+
+        .faq {
+            max-width: 820px;
+            margin: auto;
+        }
+
+        details {
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 20px 22px;
+            margin-bottom: 14px;
+            background: white;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        details p {
+            color: var(--muted);
+            margin-top: 14px;
+            font-size: 14px;
+        }
+
+        /* =========================
+           CTA
+        ========================== */
+
+        .cta {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: clamp(30px, 4vw, 45px);
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            max-width: 650px;
+            margin: 0 auto 28px;
+            color: #cbd5e1;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #020617;
+            color: #94a3b8;
+            padding: 55px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 45px;
+        }
+
+        footer h3,
+        footer h4 {
+            color: white;
+            margin-bottom: 14px;
+        }
+
+        footer p,
+        footer a {
+            font-size: 14px;
+        }
+
+        footer a {
+            display: block;
+            margin-bottom: 8px;
+            transition: .3s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .copyright {
+            padding-top: 22px;
+            border-top: 1px solid rgba(255,255,255,.08);
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 900px) {
+            .grid-3,
+            .roadmap {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero {
+                padding: 80px 0 90px;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .grid-3,
+            .roadmap,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+        <div class="container navbar">
+
+            <a href="/" class="logo">
+                Belajar<span>Coding</span>
+            </a>
+
+            <nav aria-label="Navigasi utama">
+                <ul class="nav-menu">
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#materi">Materi</a></li>
+                    <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#artikel">Artikel</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#mulai" class="nav-button">Mulai Belajar</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero" id="beranda">
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <div class="badge">
+                        🚀 Platform Belajar Programming
+                    </div>
+
+                    <h1>
+                        Mulai Belajar
+                        <span>Coding</span>
+                        dari Dasar
+                    </h1>
+
+                    <p>
+                        Pelajari dunia programming secara bertahap dengan materi
+                        yang terstruktur, praktis, dan mudah dipahami. Bangun
+                        kemampuan coding dari nol hingga siap membuat website
+                        dan aplikasi sendiri.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#materi" class="btn btn-primary">
+                            Mulai Belajar
+                        </a>
+
+                        <a href="#roadmap" class="btn btn-outline">
+                            Lihat Roadmap
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             FEATURES
+        ========================== -->
+
+        <section class="features">
+
+            <div class="container">
+
+                <div class="section-header">
+                    <span class="label">Kenapa Belajar Coding?</span>
+                    <h2>Belajar dengan Cara yang Lebih Terstruktur</h2>
+                    <p>
+                        Fokus memahami konsep dasar terlebih dahulu sebelum
+                        masuk ke teknologi yang lebih kompleks.
+                    </p>
+                </div>
+
+                <div class="grid-3">
+
+                    <article class="card">
+                        <div class="icon">💻</div>
+                        <h3>Materi Terstruktur</h3>
+                        <p>
+                            Materi disusun secara bertahap sehingga cocok
+                            untuk pemula yang belum memiliki pengalaman coding.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon">🧠</div>
+                        <h3>Mudah Dipahami</h3>
+                        <p>
+                            Pelajari konsep programming dengan penjelasan
+                            sederhana dan contoh yang mudah dipraktikkan.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon">🚀</div>
+                        <h3>Praktik Langsung</h3>
+                        <p>
+                            Tingkatkan kemampuan dengan membangun proyek
+                            sederhana menggunakan teknologi web modern.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MATERI
+        ========================== -->
+
+        <section id="materi">
+
+            <div class="container">
+
+                <div class="section-header">
+                    <span class="label">Materi Pembelajaran</span>
+                    <h2>Pelajari Teknologi Coding Populer</h2>
+                    <p>
+                        Mulai dari fondasi website hingga bahasa pemrograman
+                        dan teknologi web tingkat lanjut.
+                    </p>
+                </div>
+
+                <div class="grid-3">
+
+                    <article class="card">
+                        <div class="icon">🌐</div>
+                        <h3>HTML</h3>
+                        <p>
+                            Pelajari struktur halaman website, semantic HTML,
+                            heading, paragraph, link, image, form, table,
+                            dan berbagai elemen HTML.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon">🎨</div>
+                        <h3>CSS</h3>
+                        <p>
+                            Pelajari cara membuat tampilan website yang
+                            modern menggunakan layout, flexbox, grid,
+                            animation, responsive design, dan lainnya.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon">⚡</div>
+                        <h3>JavaScript</h3>
+                        <p>
+                            Pelajari logika programming, variable, function,
+                            array, object, DOM, event, API, hingga konsep
+                            asynchronous JavaScript.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon">🐘</div>
+                        <h3>PHP</h3>
+                        <p>
+                            Kenali dasar pemrograman server-side dengan PHP
+                            dan pelajari bagaimana website dinamis bekerja.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon">🗄️</div>
+                        <h3>Database</h3>
+                        <p>
+                            Pelajari konsep database, tabel, query, relasi,
+                            CRUD, dan dasar penggunaan database untuk aplikasi.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon">🔧</div>
+                        <h3>Git & GitHub</h3>
+                        <p>
+                            Pelajari version control untuk menyimpan,
+                            mengelola, dan berkolaborasi dalam proyek coding.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ROADMAP
+        ========================== -->
+
+        <section id="roadmap" class="features">
+
+            <div class="container">
+
+                <div class="section-header">
+                    <span class="label">Learning Roadmap</span>
+                    <h2>Roadmap Belajar Coding untuk Pemula</h2>
+                    <p>
+                        Ikuti langkah pembelajaran berikut agar proses belajar
+                        lebih terarah.
+                    </p>
+                </div>
+
+                <div class="roadmap">
+
+                    <article class="roadmap-item">
+                        <div class="number">1</div>
+                        <h3>Dasar HTML</h3>
+                        <p>
+                            Pahami struktur dan komponen dasar sebuah website.
+                        </p>
+                    </article>
+
+                    <article class="roadmap-item">
+                        <div class="number">2</div>
+                        <h3>CSS & Design</h3>
+                        <p>
+                            Buat tampilan website yang menarik dan responsif.
+                        </p>
+                    </article>
+
+                    <article class="roadmap-item">
+                        <div class="number">3</div>
+                        <h3>JavaScript</h3>
+                        <p>
+                            Pelajari logika dan interaksi pada website.
+                        </p>
+                    </article>
+
+                    <article class="roadmap-item">
+                        <div class="number">4</div>
+                        <h3>Project</h3>
+                        <p>
+                            Gabungkan kemampuan untuk membuat proyek nyata.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             COURSE
+        ========================== -->
+
+        <section id="kursus">
+
+            <div class="container">
+
+                <div class="section-header">
+                    <span class="label">Program Belajar</span>
+                    <h2>Mulai dari Level yang Tepat</h2>
+                    <p>
+                        Pilih jalur belajar sesuai dengan kemampuan dan tujuan
+                        programming Anda.
+                    </p>
+                </div>
+
+                <div class="grid-3">
+
+                    <article class="course-card">
+                        <div class="course-top">
+                            <h3>Beginner</h3>
+                            <p>Untuk yang benar-benar mulai dari nol.</p>
+                        </div>
+
+                        <div class="course-body">
+                            <ul>
+                                <li>Pengenalan programming</li>
+                                <li>HTML dasar</li>
+                                <li>CSS dasar</li>
+                                <li>JavaScript dasar</li>
+                                <li>Mini project website</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="course-card">
+                        <div class="course-top">
+                            <h3>Intermediate</h3>
+                            <p>Untuk meningkatkan kemampuan coding.</p>
+                        </div>
+
+                        <div class="course-body">
+                            <ul>
+                                <li>JavaScript lanjutan</li>
+                                <li>API & JSON</li>
+                                <li>Git & GitHub</li>
+                                <li>Database dasar</li>
+                                <li>Project web dinamis</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="course-card">
+                        <div class="course-top">
+                            <h3>Advanced</h3>
+                            <p>Untuk membangun aplikasi yang lebih kompleks.</p>
+                        </div>
+
+                        <div class="course-body">
+                            <ul>
+                                <li>Architecture</li>
+                                <li>Backend development</li>
+                                <li>Database lanjutan</li>
+                                <li>Deployment</li>
+                                <li>Production project</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ARTICLE / SEO CONTENT
+        ========================== -->
+
+        <section id="artikel" class="features">
+
+            <div class="container">
+
+                <article class="article">
+
+                    <h2>Belajar Coding untuk Pemula</h2>
+
+                    <p>
+                        Belajar coding merupakan salah satu langkah yang dapat
+                        membantu seseorang memahami bagaimana sebuah website,
+                        aplikasi, dan berbagai teknologi digital bekerja.
+                        Programming tidak hanya berkaitan dengan menulis kode,
+                        tetapi juga melatih kemampuan berpikir secara logis,
+                        memecahkan masalah, dan membangun solusi menggunakan
+                        teknologi.
+                    </p>
+
+                    <h3>Apa yang Harus Dipelajari Terlebih Dahulu?</h3>
+
+                    <p>
+                        Untuk pemula, HTML dan CSS dapat menjadi fondasi awal
+                        yang baik untuk memahami bagaimana sebuah halaman web
+                        dibuat. Setelah memahami struktur dan tampilan website,
+                        pembelajaran dapat dilanjutkan dengan JavaScript untuk
+                        menambahkan logika dan interaksi.
+                    </p>
+
+                    <h3>Contoh HTML Sederhana</h3>
+
+                    <div class="code-box">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+    &lt;title&gt;Website Pertama Saya&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Halo Dunia!&lt;/h1&gt;
+    &lt;p&gt;Saya sedang belajar coding.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                    </div>
+
+                    <p>
+                        Dengan memahami dasar-dasar tersebut, Anda dapat
+                        melanjutkan pembelajaran ke framework, backend,
+                        database, API, deployment, dan berbagai teknologi
+                        lainnya sesuai kebutuhan.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FAQ
+        ========================== -->
+
+        <section id="faq">
+
+            <div class="container">
+
+                <div class="section-header">
+                    <span class="label">FAQ</span>
+                    <h2>Pertanyaan Seputar Belajar Coding</h2>
+                </div>
+
+                <div class="faq">
+
+                    <details>
+                        <summary>Apakah coding cocok untuk pemula?</summary>
+                        <p>
+                            Ya. Coding dapat dipelajari secara bertahap mulai
+                            dari konsep dasar hingga teknologi yang lebih
+                            kompleks.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Apakah harus jago matematika?</summary>
+                        <p>
+                            Tidak selalu. Untuk web development dasar,
+                            kemampuan berpikir logis dan memahami konsep
+                            programming jauh lebih penting.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Bahasa coding apa yang sebaiknya dipelajari?</summary>
+                        <p>
+                            Untuk web development, Anda dapat memulai dari
+                            HTML, CSS, dan JavaScript sebelum mempelajari
+                            teknologi backend atau framework.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Berapa lama waktu yang dibutuhkan?</summary>
+                        <p>
+                            Waktu belajar setiap orang berbeda. Konsistensi
+                            latihan dan praktik membuat proyek biasanya lebih
+                            penting daripada sekadar mengejar jumlah jam belajar.
+                        </p>
+                    </details>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CTA
+        ========================== -->
+
+        <section class="cta" id="mulai">
+
+            <div class="container">
+
+                <h2>Siap Memulai Perjalanan Coding?</h2>
+
+                <p>
+                    Mulai dari dasar, pahami konsepnya, praktikkan secara
+                    langsung, lalu bangun proyek Anda sendiri.
+                </p>
+
+                <a href="#materi" class="btn btn-primary">
+                    Mulai Belajar Sekarang
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <h3>BelajarCoding</h3>
+                    <p>
+                        Platform pembelajaran coding yang membantu pemula
+                        memahami programming secara bertahap dan terstruktur.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>Materi</h4>
+                    <a href="#materi">HTML</a>
+                    <a href="#materi">CSS</a>
+                    <a href="#materi">JavaScript</a>
+                    <a href="#materi">PHP</a>
+                </div>
+
+                <div>
+                    <h4>Navigasi</h4>
+                    <a href="#beranda">Beranda</a>
+                    <a href="#roadmap">Roadmap</a>
+                    <a href="#artikel">Artikel</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+
+                <div>
+                    <h4>Informasi</h4>
+                    <a href="/tentang-kami">Tentang Kami</a>
+                    <a href="/kontak">Kontak</a>
+                    <a href="/privacy-policy">Privacy Policy</a>
+                    <a href="/terms">Terms & Conditions</a>
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                © 2026 BelajarCoding. All Rights Reserved.
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         SIMPLE JAVASCRIPT
+    ========================== -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const links = document.querySelectorAll('a[href^="#"]');
+
+            links.forEach(function (link) {
+                link.addEventListener("click", function (event) {
+
+                    const targetId = this.getAttribute("href");
+
+                    if (targetId === "#") return;
+
+                    const target = document.querySelector(targetId);
+
+                    if (target) {
+                        event.preventDefault();
+
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+                    }
+                });
+            });
+
+        });
+    </script>
+
+</body>
+</html>
